@@ -10,10 +10,10 @@ const Navbar = () => {
     <div className='navbar'>
       <img src={assets.hunger_logo} alt="" className="logo" />
       <ul className="navbar-menu">
-        <li className={menu==="Home"?"active":""}>Home</li>
-        <li className={menu==="Menu"?"active":""}>Menu</li>
-        <li className={menu==="Mobile-App"?"active":""}>Mobile-App</li>
-        <li className={menu==="Contact Us"?"active":""}>Contact Us</li>
+        <li onClick={()=>setMenu("Home")} className={menu==="Home"?"active":""}>Home</li>
+        <li onClick={()=>setMenu("Menu")} className={menu==="Menu"?"active":""}>Menu</li>
+        <li onClick={()=>setMenu("Mobile-App")} className={menu==="Mobile-App"?"active":""}>Mobile-App</li>
+        <li onClick={()=>setMenu("Contact Us")} className={menu==="Contact Us"?"active":""}>Contact Us</li>
       </ul>
       <div className="navbar-right">
         <img src={assets.search_icon} alt="" />
@@ -21,7 +21,7 @@ const Navbar = () => {
         <img src={assets.basket_icon} alt="" />
         <div className="dot"></div>
       </div>
-      <button>sign in</button>
+      <button>Sign In</button>
     </div>
     </div>
   );

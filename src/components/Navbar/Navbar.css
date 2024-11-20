@@ -3,30 +3,37 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
-    
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 } 
-  
+
 .navbar .logo {
     width: 150px;
-    
-  }
+}
 
- .navbar-menu{
+.navbar-menu {
     display: flex;
     list-style: none;
     gap: 20px;
     color: #49667e;
     font-size: 18px;
- } 
-  
- .navbar-right{
+}
+
+.navbar-menu li {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-menu li:hover {
+    color: tomato;
+}
+
+.navbar-right {
     display: flex;
     align-items: center;
     gap: 20px;
- }
+}
 
- .navbar button{
+.navbar button {
     background: transparent;
     font-size: 16px;
     color: #49557e;
@@ -35,13 +42,55 @@
     border-radius: 50px;
     cursor: pointer;
     transition: 0.3s;
- }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
- .navbar button:hover{
+.navbar button:hover {
     background-color: #fff4f2;
- }
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
 
- .navbar .active{
+.navbar .active {
     padding-bottom: 2px;
-    border-bottom: 2px solid #49557e;
- }
+    border-bottom: 2px solid tomato;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar button {
+        width: 100%; /* Full-width button for smaller screens */
+    }
+} 
+
+.navbar-search-icon {
+    position: relative; /* Ensures .dot is positioned relative to this element */
+    width: 24px; /* Adjust to the size of your icon */
+    height: 24px; /* Adjust to the size of your icon */
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 50%; /* Ensures it appears as a circle */
+    top: -8px; /* Adjust to position the dot above the icon */
+    right: -8px; /* Adjust to position the dot to the right */
+}

@@ -1,0 +1,60 @@
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header_img1.png') no-repeat center center;
+    background-size: cover; /* Ensure the background covers the area */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Default text color */
+    
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.header-contents {
+    z-index: 2; /* Ensure contents are above the overlay */
+    padding: 20px;
+}
+
+.header h2 {
+    font-size: 3rem; /* Make the title bigger */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow to make the text pop */
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add shadow for readability */
+}
+
+.header button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+    background-color: #ff4747;
+}

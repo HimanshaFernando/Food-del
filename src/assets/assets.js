@@ -3,6 +3,7 @@ import logo from './logo.png'
 import hunger_logo from './hunger_logo.png'
 import hunger_logo2 from './hunger_logo2.png'
 import header_img from './header_img.png'
+import header_img1 from './header_img1.png'
 import search_icon from './search_icon.png'
 import menu_1 from './menu_1.png'
 import menu_2 from './menu_2.png'
@@ -68,6 +69,7 @@ export const assets = {
     hunger_logo2,
     basket_icon,
     header_img,
+    header_img1,
     search_icon,
     rating_starts,
     add_icon_green,
