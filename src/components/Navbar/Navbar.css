@@ -1,10 +1,14 @@
 .navbar {
-    padding: 20px 0px;
+    padding: 20px 20px; /* Adjust padding for top-bottom and left-right */
+    margin: 0 20px; /* Add margins for spacing from the edges */
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-} 
+    border-radius: 10px; /* Optional: Adds a modern rounded edge look */
+    background-color: #fff; /* Optional: Background color to highlight the navbar */
+}
+
 
 .navbar .logo {
     width: 150px;
