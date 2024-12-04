@@ -1,0 +1,160 @@
+/* General container styling */
+.place-order {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 50px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Subtle background color */
+    border-radius: 10px;
+  }
+  
+  /* Left side (Delivery Information) */
+  .place-order-left {
+    width: 60%;
+  }
+  
+  .place-order-left .title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333; /* Neutral text color */
+  }
+  
+  .place-order-left input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline-color: tomato;
+    background-color: #fff; /* Ensure input background is white */
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .place-order-left input:focus {
+    border-color: tomato;
+    box-shadow: 0px 0px 6px rgba(255, 99, 71, 0.5);
+  }
+  
+  .place-order-left .multi-fields {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Right side (Cart Totals) */
+  .cart-total {
+    margin-top: 20px;
+    width: 35%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+    position: sticky; /* Keep the cart totals visible on scroll */
+    top: 20px;
+  }
+  
+  .cart-total h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333; /* Neutral text color */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555; /* Slightly lighter text color for details */
+  }
+  
+  .cart-total-details p {
+    margin: 0;
+  }
+  
+  .cart-total-details b {
+    font-weight: 700;
+    color: #000; /* Ensure bold items stand out */
+  }
+  
+  /* Button styling */
+  .cart-total button {
+    width: 100%;
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-total button:hover {
+    background-color: darkred;
+    transform: translateY(-2px); /* Subtle hover effect */
+  }
+  
+  /* Order Type Toggle Buttons */
+  .order-type {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  .order-type button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .order-type button.active {
+    background-color: darkgray;
+    color: #fff;
+    border-color: tomato;
+  }
+  
+  .order-type button:hover {
+    background-color: #ffe0db; /* Subtle hover effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .place-order {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .place-order-left,
+    .cart-total {
+      width: 100%;
+      max-width: 500px;
+    }
+  
+    .place-order-left {
+      margin-bottom: 20px;
+    }
+  
+    .cart-total {
+      top: unset; /* Remove sticky position for small screens */
+    }
+  }
+  

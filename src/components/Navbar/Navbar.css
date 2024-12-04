@@ -1,19 +1,22 @@
+/* Navbar container styling */
 .navbar {
-    padding: 20px 20px; /* Adjust padding for top-bottom and left-right */
-    margin: 0 20px; /* Add margins for spacing from the edges */
+    padding: 20px;
+    margin: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Optional: Adds a modern rounded edge look */
-    background-color: #fff; /* Optional: Background color to highlight the navbar */
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
 }
 
-
+/* Logo styling */
 .navbar .logo {
     width: 150px;
 }
 
+/* Navbar menu styling */
 .navbar-menu {
     display: flex;
     list-style: none;
@@ -22,6 +25,7 @@
     font-size: 18px;
 }
 
+/* Menu items */
 .navbar-menu li {
     cursor: pointer;
     transition: color 0.3s ease-in-out;
@@ -31,12 +35,14 @@
     color: tomato;
 }
 
+/* Right section */
 .navbar-right {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
+/* Button styling */
 .navbar button {
     background: transparent;
     font-size: 16px;
@@ -54,39 +60,18 @@
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Active menu item styling */
 .navbar .active {
     padding-bottom: 2px;
     border-bottom: 2px solid tomato;
     font-weight: bold;
 }
 
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-    }
-
-    .navbar-menu {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .navbar-right {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .navbar button {
-        width: 100%; /* Full-width button for smaller screens */
-    }
-} 
-
+/* Search icon with notification dot */
 .navbar-search-icon {
-    position: relative; /* Ensures .dot is positioned relative to this element */
-    width: 24px; /* Adjust to the size of your icon */
-    height: 24px; /* Adjust to the size of your icon */
+    position: relative;
+    width: 24px;
+    height: 24px;
 }
 
 .navbar-search-icon .dot {
@@ -94,7 +79,73 @@
     min-width: 10px;
     min-height: 10px;
     background-color: tomato;
-    border-radius: 50%; /* Ensures it appears as a circle */
-    top: -8px; /* Adjust to position the dot above the icon */
-    right: -8px; /* Adjust to position the dot to the right */
+    border-radius: 50%;
+    top: -8px;
+    right: -8px;
+}
+
+/* Responsive Design */
+
+/* Tablet screens (below 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    /* Hide the menu by default for smaller screens */
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Toggle menu visibility */
+    .navbar-menu.show {
+        display: flex;
+    }
+
+    .navbar-right {
+        flex-direction: row-reverse;
+        gap: 10px;
+    }
+
+    .navbar button {
+        width: 100%;
+    }
+
+    /* Hamburger menu styling */
+    .navbar-hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .navbar-hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #49557e;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+}
+
+/* Mobile screens (below 480px) */
+@media (max-width: 480px) {
+    .navbar-menu li {
+        font-size: 16px; /* Slightly smaller font for compact view */
+    }
+
+    .navbar .logo {
+        width: 120px; /* Scale down logo for smaller screens */
+    }
 }

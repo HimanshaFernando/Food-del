@@ -1,15 +1,14 @@
 .header {
-    height: 34vw;
+    height: 34vw; /* Default height for larger screens */
     margin: 30px auto;
     background: url('/header_img1.png') no-repeat center center;
-    background-size: cover; /* Ensure the background covers the area */
+    background-size: cover;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white; /* Default text color */
-    
+    color: white;
 }
 
 .header::before {
@@ -26,12 +25,15 @@
 .header-contents {
     z-index: 2; /* Ensure contents are above the overlay */
     padding: 20px;
+    max-width: 90%; /* Restrict the width of the content */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .header h2 {
-    font-size: 3rem; /* Make the title bigger */
+    font-size: 3rem; /* Large title for desktops */
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow to make the text pop */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
 }
 
 .header p {
@@ -41,7 +43,7 @@
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add shadow for readability */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .header button {
@@ -57,4 +59,57 @@
 
 .header button:hover {
     background-color: #ff4747;
+}
+
+/* Responsive adjustments for medium screens */
+@media (max-width: 1050px) {
+    .header {
+        height: 50vw; /* Increase height for medium-sized screens */
+    }
+    .header h2 {
+        font-size: 2.5rem; /* Adjust font size */
+    }
+    .header p {
+        font-size: 1rem;
+    }
+    .header button {
+        padding: 8px 16px; /* Slightly smaller button */
+    }
+}
+
+/* Responsive adjustments for small screens (mobile) */
+@media (max-width: 768px) {
+    .header {
+        height: 60vw; /* Increase height for small screens */
+    }
+    .header-contents {
+        padding: 10px; /* Reduce padding */
+    }
+    .header h2 {
+        font-size: 2rem; /* Smaller font size for titles */
+    }
+    .header p {
+        font-size: 0.9rem;
+        line-height: 1.4; /* Adjust line height for readability */
+    }
+    .header button {
+        padding: 8px 16px; /* Smaller buttons for mobile */
+    }
+}
+
+/* Further adjustments for extra-small screens */
+@media (max-width: 480px) {
+    .header {
+        height: 70vw; /* Further increase height for small devices */
+    }
+    .header h2 {
+        font-size: 1.8rem; /* Reduce title size */
+    }
+    .header p {
+        font-size: 0.8rem; /* Smaller font size for paragraphs */
+    }
+    .header button {
+        font-size: 0.9rem; /* Reduce button font size */
+        padding: 6px 12px;
+    }
 }
